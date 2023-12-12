@@ -1,0 +1,10 @@
+.display_box {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+.display_box > * {
+    margin-bottom: 30px;
+}

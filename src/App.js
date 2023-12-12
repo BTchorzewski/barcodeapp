@@ -1,25 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { Context, createContext, useState } from 'react';
+import React from 'react';
+import { CodeContext, CodeProvider } from './context/context'
+import { Display } from './components/display';
+import Input from './components/input';
 
-function App() {
+ const App = function() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <CodeProvider>
+        <div className="App">
+          <Input></Input>
+          <Display></Display>
+        </div>  
+      </CodeProvider>
+    
   );
-}
+};
 
 export default App;
